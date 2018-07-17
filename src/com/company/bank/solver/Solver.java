@@ -1,4 +1,4 @@
-package com.company.Bank.Solvers;
+package com.company.bank.solver;
 
 public interface Solver extends Runnable {
 

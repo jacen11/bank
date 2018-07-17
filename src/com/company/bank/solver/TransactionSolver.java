@@ -1,6 +1,6 @@
-package com.company.Bank.Solvers;
+package com.company.bank.solver;
 
-import com.company.Customer.Payable;
+import com.company.customer.Payable;
 
 import java.math.BigDecimal;
 
@@ -19,14 +19,12 @@ public class TransactionSolver implements Solver {
     @Override
     public void run() {
         if (source.giveCash(cash)) {
-            status = new TransactionStatus(100);
             destination.takeCash(cash);
-            source.addHistory(cash, destination, false, status);
-            destination.addHistory(cash, source, true, status);
+            source.addHistory(cash, destination, false, TransactionStatus.OK);
+            destination.addHistory(cash, source, true, TransactionStatus.OK);
         } else {
-            status = new TransactionStatus(200, "Something wrong");
-            source.addHistory(cash, destination, false, status);
-            destination.addHistory(cash, source, true, status);
+            source.addHistory(cash, destination, false, TransactionStatus.ERROR);
+            destination.addHistory(cash, source, true, TransactionStatus.ERROR);
         }
     }
 }

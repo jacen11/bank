@@ -1,30 +1,30 @@
-package com.company.Customer;
+package com.company.customer;
 
-import com.company.Bank.Solvers.TransactionStatus;
-import com.company.Payment.Payment;
+import com.company.bank.solver.TransactionStatus;
+import com.company.payment.Payment;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PersonalCustomer extends Customer {
     private final String passportId;
-    private Map<String,Payment> payments = new HashMap<>();
+    private List<Payment> payments = new ArrayList<>();
 
     public PersonalCustomer(final String login, final String password, final BigDecimal cash, final String passportId) {
         super(login, password, cash);
         this.passportId = passportId;
     }
 
-    public Map<String,Payment> getPayments() {
-        return new HashMap<>(payments);
+    public ArrayList<Payment> getPayments() {
+        return new ArrayList<>(payments);
     }
 
     public void addPayment(BigDecimal cash, LocalDateTime localDateTime, Payable payable, boolean income,
                            TransactionStatus status) {
         Payment payment = new Payment(cash, localDateTime, payable, income, status);
-        this.payments.put(LocalDateTime.now().toString(),payment);
+        this.payments.add(payment);
     }
     public String getPassportId() {
         return passportId;

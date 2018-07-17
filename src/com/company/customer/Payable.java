@@ -1,6 +1,6 @@
-package com.company.Customer;
+package com.company.customer;
 
-import com.company.Bank.Solvers.TransactionStatus;
+import com.company.bank.solver.TransactionStatus;
 
 import java.math.BigDecimal;
 

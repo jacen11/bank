@@ -1,7 +1,7 @@
-package com.company.Payment;
+package com.company.payment;
 
-import com.company.Bank.Solvers.TransactionStatus;
-import com.company.Customer.Payable;
+import com.company.bank.solver.TransactionStatus;
+import com.company.customer.Payable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
