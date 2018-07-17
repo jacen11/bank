@@ -1,4 +1,6 @@
-package com.company;
+package com.company.Client;
+
+import com.company.Payment.Payment;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -11,7 +13,7 @@ public class Individual extends Client {
     private ArrayList<Payment> payments = new ArrayList<>();
 
 
-    Individual(String passportID) {
+    public Individual(String passportID) {
         if (passportID.toCharArray().length == 10 && isNumeric(passportID)) {
             this.passportID = passportID;
         }

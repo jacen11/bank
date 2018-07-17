@@ -1,4 +1,6 @@
-package com.company;
+package com.company.Payment;
+
+import com.company.Client.Individual;
 
 import java.util.Date;
 
@@ -9,7 +11,7 @@ public class Payment {
     private Individual source;
     private Individual target;
 
-    Payment(double change, Date date, Individual source, Individual target) {
+    public Payment(double change, Date date, Individual source, Individual target) {
         this.change = change;
         this.date = date;
         this.source = source;

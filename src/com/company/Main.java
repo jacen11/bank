@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.Client.Individual;
+
 import java.util.Date;
 
 public class Main {
