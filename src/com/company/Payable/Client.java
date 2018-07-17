@@ -1,6 +1,6 @@
-package com.company.Client;
+package com.company.Payable;
 
-public abstract class Client {
+public abstract class Client implements Payable {
 
     private String login;
     private String password;

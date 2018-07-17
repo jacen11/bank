@@ -1,52 +1,39 @@
 package com.company.Payment;
 
-import com.company.Client.Individual;
+import com.company.Payable.Payable;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 public class Payment {
 
-    private double change;
-    private Date date;
-    private Individual source;
-    private Individual target;
+    final private BigDecimal change;
+    final private Date date;
+    final private Payable source;
+    final private Payable target;
 
-    public Payment(double change, Date date, Individual source, Individual target) {
+    public Payment(BigDecimal change, Date date, Payable source, Payable target) {
         this.change = change;
         this.date = date;
         this.source = source;
         this.target = target;
     }
 
-    public double getChange() {
+    public BigDecimal getChange() {
         return change;
-    }
-
-    public void setChange(double change) {
-        this.change = change;
     }
 
     public Date getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public Individual getSource() {
+    public Payable getSource() {
         return source;
     }
 
-    public void setSource(Individual source) {
-        this.source = source;
-    }
-
-    public Individual getTarget() {
+    public Payable getTarget() {
         return target;
     }
 
-    public void setTarget(Individual target) {
-        this.target = target;
-    }
+
 }
