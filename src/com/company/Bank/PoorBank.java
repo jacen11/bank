@@ -1,7 +1,6 @@
 package com.company.Bank;
 
 import com.company.Bank.Solvers.TransactionSolver;
-import com.company.Bank.Solvers.TransactionStatus;
 import com.company.Customer.Customer;
 import com.company.Customer.Payable;
 
