@@ -19,14 +19,20 @@ public class Main {
         //     System.out.println(client2.getPassportID());
         System.out.println(client2 == null);
 
-        System.out.println("Деньги на счету " + client1.getMoney());
+        System.out.println("Деньги на счету client1 " + client1.getMoney());
+        System.out.println("Деньги на счету  client3 " + client3.getMoney());
+        System.out.println();
+
         client1.addPayment(new BigDecimal(-50), new Date(), client1, client3);
         System.out.println("Платеж 1 " + client1.getPayments().get(0).getChange());
-        System.out.println("Деньги на счету " + client1.getMoney());
+        System.out.println("Деньги на счету client1 " + client1.getMoney());
+        System.out.println("Деньги на счету  client3 " + client3.getMoney());
+        System.out.println();
 
         client1.addPayment(new BigDecimal(500), new Date(), client1, client3);
         System.out.println("Платеж 2 " + client1.getPayments().get(1).getChange());
-        System.out.println("Деньги на счету " + client1.getMoney());
+        System.out.println("Деньги на счету  client1 " + client1.getMoney());
+        System.out.println("Деньги на счету  client3 " + client3.getMoney());
 
 
     }
